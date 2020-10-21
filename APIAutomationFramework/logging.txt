@@ -1,0 +1,86 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.65444,
+        "lng": 33.6544
+    },
+    "name": "Mohan",
+    "accuracy": 39,
+    "phone_number": "9090897807",
+    "address": "Colony",
+    "types": [
+        "babluoo dukan",
+        "deva dukan",
+        "babal shop"
+    ],
+    "website": "google.com",
+    "language": "Sindhi"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Oct 2020 13:53:03 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "8b325ec27084cb2f8b9bb931441fcc2f",
+    "scope": "APP",
+    "reference": "266da1a59354a3fdc562178d94033b58266da1a59354a3fdc562178d94033b58",
+    "id": "266da1a59354a3fdc562178d94033b58"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=8b325ec27084cb2f8b9bb931441fcc2f
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=8b325ec27084cb2f8b9bb931441fcc2f
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 20 Oct 2020 13:53:05 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 226
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-38.65444",
+        "longitude": "33.6544"
+    },
+    "accuracy": "39",
+    "name": "Mohan",
+    "phone_number": "9090897807",
+    "address": "Colony",
+    "types": "babluoo dukan,deva dukan,babal shop",
+    "website": "google.com",
+    "language": "Sindhi"
+}
