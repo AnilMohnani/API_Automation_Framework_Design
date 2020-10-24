@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/java/features",glue="stepDefinitions",monochrome=true,
-tags= "@AddPlace",plugin="json:target/jsonReports/cucumber-report.json")
+plugin="json:target/jsonReports/cucumber-report.json")
 public class TestRunner {
 
 }

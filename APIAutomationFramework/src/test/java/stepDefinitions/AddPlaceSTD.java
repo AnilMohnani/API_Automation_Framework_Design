@@ -26,7 +26,7 @@ import resources.Utils;
 
 public class AddPlaceSTD extends Utils{
 	RequestSpecification reqSpec;
-	Response response;
+	Response response=null;
 	 static String place_id;
 	TestDataPayload testDataPayload=new TestDataPayload();
 
@@ -40,9 +40,13 @@ public class AddPlaceSTD extends Utils{
 	APIResources resources=APIResources.valueOf(resource);
 	String apiResource=resources.getResource();
 	if(method.equalsIgnoreCase("POST"))
+	{
 	 response=reqSpec.when().post(apiResource);
+	}
 	else if(method.equalsIgnoreCase("GET"))
+	{
 	 response=reqSpec.when().get(apiResource);
+	}
 }
 @Then("The Response received is success with status code as {int}")
 public void the_response_received_is_success_with_status_code_as(int expectedCode) {
@@ -51,7 +55,7 @@ assertEquals(response.getStatusCode(),expectedCode);
 }
 @Then("{string} in response body is {string}")
 public void in_response_body_is(String key, String value) {
-	    assertEquals(value,getJsonPath(response, key));
+	    assertEquals(value,getJsonPath(response,key));
   
 }
 @Then("Verify {string} {string} {string} {int} in {string} using GET Http Request")
@@ -60,6 +64,7 @@ public void verify_in_using_get_http_request(String name, String address, String
 	 System.out.println( place_id);
 	reqSpec=given().spec(requestSpecification()).queryParam("place_id", place_id);
 	user_calls_the_with_http_request(resource,"GET");
+	System.out.println(response.asString());
 	String actualName=getJsonPath(response, "name");
 	assertEquals(name, actualName);
 	assertEquals(address, getJsonPath(response, "address"));

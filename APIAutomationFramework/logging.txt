@@ -15,7 +15,7 @@ Body:
         "lat": -38.65444,
         "lng": 33.6544
     },
-    "name": "Mohan",
+    "name": "MSDianfan clib",
     "accuracy": 39,
     "phone_number": "9090897807",
     "address": "Colony",
@@ -28,7 +28,7 @@ Body:
     "language": "Sindhi"
 }
 HTTP/1.1 200 OK
-Date: Tue, 20 Oct 2020 13:53:03 GMT
+Date: Sat, 24 Oct 2020 15:12:42 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -41,17 +41,17 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "8b325ec27084cb2f8b9bb931441fcc2f",
+    "place_id": "ceeb5402b1aba71355144be4afb44cbe",
     "scope": "APP",
-    "reference": "266da1a59354a3fdc562178d94033b58266da1a59354a3fdc562178d94033b58",
-    "id": "266da1a59354a3fdc562178d94033b58"
+    "reference": "c28363303d02de9d707f38c1b5e641d1c28363303d02de9d707f38c1b5e641d1",
+    "id": "c28363303d02de9d707f38c1b5e641d1"
 }
 Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=8b325ec27084cb2f8b9bb931441fcc2f
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=ceeb5402b1aba71355144be4afb44cbe
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=8b325ec27084cb2f8b9bb931441fcc2f
+				place_id=ceeb5402b1aba71355144be4afb44cbe
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -60,13 +60,13 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Tue, 20 Oct 2020 13:53:05 GMT
+Date: Sat, 24 Oct 2020 15:12:43 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 226
+Content-Length: 235
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
@@ -77,10 +77,40 @@ Content-Type: application/json;charset=UTF-8
         "longitude": "33.6544"
     },
     "accuracy": "39",
-    "name": "Mohan",
+    "name": "MSDianfan clib",
     "phone_number": "9090897807",
     "address": "Colony",
     "types": "babluoo dukan,deva dukan,babal shop",
     "website": "google.com",
     "language": "Sindhi"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "place_id": "ceeb5402b1aba71355144be4afb44cbe"
+}
+HTTP/1.1 200 OK
+Date: Sat, 24 Oct 2020 15:12:47 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 15
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK"
 }

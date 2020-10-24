@@ -12,7 +12,7 @@ Scenario Outline: Verify if Add Place API is successfully adding a place.
 	
 	Examples: 
 		|name|address|language|accuracy|
-		|Mohan|Colony|Sindhi|39|
+		|MSDianfan clib|Colony|Sindhi|39|
 		##|Sachin|Colony|Sindhi|40|
 
 @DeletePlace	

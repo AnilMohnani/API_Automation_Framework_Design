@@ -20,6 +20,7 @@ import io.restassured.specification.ResponseSpecification;
 
 public class Utils {
 	public static RequestSpecification reqSpec;
+	public RequestSpecification reqBookSpec;
 	ResponseSpecification responseSpec;
 	Properties prop;
 
@@ -33,7 +34,7 @@ public class Utils {
 				.addFilter(RequestLoggingFilter.logRequestTo(log))
 				.addFilter(ResponseLoggingFilter.logResponseTo(log))
 				.build();
-		return reqSpec;
+				return reqSpec;
 	}
 		return reqSpec;
 	}
@@ -57,8 +58,20 @@ public class Utils {
 	public String getJsonPath(Response response,String key)
 	{
 		JsonPath js=new JsonPath(response.asString());
-		return js.get(key).toString()
-				;
+		return js.get(key).toString();
+		
+	}
+	
+	public RequestSpecification getRequestSpecForAddBook() throws FileNotFoundException
+	{
+		
+		PrintStream out=new PrintStream(new File("logBook.txt"));
+		reqBookSpec=new RequestSpecBuilder().setBaseUri("http://216.10.245.166").setContentType(ContentType.JSON).
+		addFilter(RequestLoggingFilter.logRequestTo(out))
+		.addFilter(ResponseLoggingFilter.logResponseTo(out))		
+		.build();
+		return reqBookSpec;
+		
 		
 	}
 	

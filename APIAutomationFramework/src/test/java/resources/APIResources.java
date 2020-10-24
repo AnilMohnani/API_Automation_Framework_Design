@@ -4,7 +4,8 @@ public enum APIResources {
 
 	AddPlaceApi("maps/api/place/add/json"),
 	GetPlaceApi("maps/api/place/get/json"),
-	DeletePlaceApi("maps/api/place/delete/json");
+	DeletePlaceApi("maps/api/place/delete/json"),
+	AddBookApi("Library/Addbook.php");
 	private String resource; 
 	
 	public String getResource() {
